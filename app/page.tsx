@@ -1,8 +1,11 @@
-import Image from "next/image";
+import HeroSection from "./Component/HeroSection";
 import { Navbar } from "./Component/Navbar";
 
 export default function Home() {
   return (
-    <Navbar />
+    <div className="py-4 px-20">
+      <Navbar />
+      <HeroSection />
+    </div>
   );
 }

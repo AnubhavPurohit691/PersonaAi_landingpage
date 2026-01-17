@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Imbue, Inter} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-geist-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  display:"swap"
+})
+export const imbue = Imbue({
   subsets: ["latin"],
-});
+  weight: ["400", "600", "700"],
+  display: "swap",
+  variable: "--font-imbue",
+}); 
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable}  antialiased bg-amber-50`}
       >
         {children}
       </body>
