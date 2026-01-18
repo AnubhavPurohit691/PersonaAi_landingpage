@@ -4,7 +4,7 @@ import ImageSection from './HeroSectionComponents/ImageSection'
 
 const HeroSection = () => {
   return (
-    <div className='flex flex-col gap-32 '>
+    <div className='flex flex-col  '>
       <Hero_first_Section />
       <ImageSection/>
     </div>
