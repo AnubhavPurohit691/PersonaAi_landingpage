@@ -2,7 +2,7 @@ import React from 'react'
 
 const TextafterBento = () => {
   return (
-    <div className='flex flex-col gap-4 max-w-3xl pt-10 mx-auto'>
+    <div className='flex flex-col gap-4 max-w-3xl py-20 mx-auto px-4'>
     <h1 className='font-extrabold text-center text-4xl'>
         Proven Results, Real Impact    
     </h1> 

@@ -19,7 +19,7 @@ const paragraph = [
 
 const TextsAfterHero = () => {
   return (
-    <div className='max-w-6xl mx-auto px-6 py-20'>
+    <div className='max-w-6xl mx-auto px-6 py-10'>
       <div className='flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0'>
         {paragraph.map((p) => {
           return (

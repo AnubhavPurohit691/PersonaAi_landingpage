@@ -33,6 +33,9 @@ export const Navbar = () => {
             <div className="cursor-pointer font-medium hover:text-gray-600">About</div>
             <div className="cursor-pointer font-medium hover:text-gray-600">Pricing</div>
             <div className="cursor-pointer font-medium hover:text-gray-600">Contact</div>
+            <button className="bg-black text-white px-4 py-2 rounded-full mt-2 w-fit">
+              Get started
+            </button>
         </div>
       )}
     </div>
