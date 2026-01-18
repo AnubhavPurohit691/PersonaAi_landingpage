@@ -19,7 +19,7 @@ const Hero_first_Section = () => {
             <div className='pl-6 pt-2 text-sm md:text-base'>
               Get started for Free
             </div>
-            <FaArrowCircleRight color="grey" size={40} className='pr-1 py-1' />
+            <FaArrowCircleRight  size={40} className='pr-1 py-1' />
           </button>
         </div>
       </div>

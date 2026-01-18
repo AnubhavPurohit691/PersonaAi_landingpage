@@ -18,7 +18,7 @@ export const Rightcomponent = () => {
           Get started
           </div>
           <div className="pl-1">
-            <FaArrowCircleRight color="grey" size={26} />
+            <FaArrowCircleRight color="white" size={26} />
           </div>
         </button>
       </div>

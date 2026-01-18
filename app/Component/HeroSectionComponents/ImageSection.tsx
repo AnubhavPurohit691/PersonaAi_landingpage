@@ -26,16 +26,16 @@ const ImageSection = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setRadius(700)
-        setCardWidth(220)
+        setRadius(1200) // Adjusted for 400px cards to keep gaps small
+        setCardWidth(400) // Much larger images
         setIsMobile(false)
       } else if (window.innerWidth >= 768) {
-        setRadius(500)
-        setCardWidth(180)
+        setRadius(800)
+        setCardWidth(250)
         setIsMobile(false)
       } else {
-        setRadius(300)
-        setCardWidth(180) // Slightly wider on mobile for better view
+        setRadius(400)
+        setCardWidth(200) 
         setIsMobile(true)
       }
     }
@@ -50,10 +50,10 @@ const ImageSection = () => {
   useEffect(() => {
     if (isMobile) return;
 
-    // Infinite loop animation 0 -> 360 for 3D
+    // Slow motion: 80s duration
     const controls = animate(rotation, 360, {
       ease: "linear",
-      duration: 35, 
+      duration: 80, 
       repeat: Infinity,
       repeatType: "loop", 
       from: 0
@@ -109,13 +109,19 @@ const ImageSection = () => {
     <div 
       className="h-80 w-full overflow-hidden flex items-center justify-center relative bg-transparent"
       style={{ 
-        perspective: "1000px", 
+        perspective: "400px", 
          maskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
         WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)"
       }}
     >
       {/* 3D Scene Container */}
-      <div className="relative flex items-center justify-center" style={{ transformStyle: "preserve-3d" }}>
+      <div 
+        className="relative flex items-center justify-center" 
+        style={{ 
+          transform: "translateZ(400px)", // Very close for massive side-scale effect
+          transformStyle: "preserve-3d" 
+        }}
+      >
         
         {/* Rotating Carousel */}
         <motion.div 
@@ -142,8 +148,8 @@ const ImageSection = () => {
       </div>
 
        {/* Blur Overlays */}
-       <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none backdrop-blur-[2px]" style={{ maskImage: "linear-gradient(to right, black, transparent)" }}></div>
-       <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none backdrop-blur-[2px]" style={{ maskImage: "linear-gradient(to left, black, transparent)" }}></div>
+       <div className="absolute left-0 top-0 bottom-0 w-60 z-10 pointer-events-none backdrop-blur-[4px]" style={{ maskImage: "linear-gradient(to right, black, transparent)" }}></div>
+       <div className="absolute right-0 top-0 bottom-0 w-60 z-10 pointer-events-none backdrop-blur-[4px]" style={{ maskImage: "linear-gradient(to left, black, transparent)" }}></div>
     </div>
   )
 }
