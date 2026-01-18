@@ -19,28 +19,97 @@ const ImageSection = () => {
   const rotation = useMotionValue(0)
 
   // Configure the carousel
-  const CARD_WIDTH = 220 
-  // Further increased radius to create more gap between images
-  const RADIUS = 700 
+  const [cardWidth, setCardWidth] = useState(140)
+  const [radius, setRadius] = useState(300)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    // Infinite loop animation 0 -> 360
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setRadius(700)
+        setCardWidth(220)
+        setIsMobile(false)
+      } else if (window.innerWidth >= 768) {
+        setRadius(500)
+        setCardWidth(180)
+        setIsMobile(false)
+      } else {
+        setRadius(300)
+        setCardWidth(180) // Slightly wider on mobile for better view
+        setIsMobile(true)
+      }
+    }
+
+    // Set initial values
+    handleResize()
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, []) 
+
+  useEffect(() => {
+    if (isMobile) return;
+
+    // Infinite loop animation 0 -> 360 for 3D
     const controls = animate(rotation, 360, {
       ease: "linear",
-      duration: 35, // Slower for elegance
+      duration: 35, 
       repeat: Infinity,
       repeatType: "loop", 
       from: 0
     })
 
     return () => controls.stop()
-  }, [rotation])
+  }, [rotation, isMobile])
+
+  if (isMobile) {
+    return (
+      <div className="h-80 w-full overflow-hidden flex items-center bg-transparent relative">
+         <motion.div 
+           className="flex gap-4"
+           animate={{
+             x: ["0%", "-50%"] // Move halfway because we duplicated list for seamless loop
+           }}
+           transition={{
+             ease: "linear",
+             duration: 120,
+             repeat: Infinity,
+           }}
+         >
+           {[...images, ...images].map((item, index) => (
+             <div 
+               key={`mobile-${index}`}
+               className="relative shrink-0 rounded-2xl overflow-hidden border border-white/10"
+               style={{
+                 width: cardWidth,
+                 height: cardWidth * 1.4,
+               }}
+             >
+                <div className="relative w-full h-full bg-black/80">
+                  <Image
+                    src={item.image_url}
+                    alt="image"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
+                </div>
+             </div>
+           ))}
+         </motion.div>
+         
+         {/* Blur Overlays for Mobile */}
+         <div className="absolute left-0 top-0 bottom-0 w-8 z-10 pointer-events-none backdrop-blur-[1px]" style={{ maskImage: "linear-gradient(to right, black, transparent)" }}></div>
+         <div className="absolute right-0 top-0 bottom-0 w-8 z-10 pointer-events-none backdrop-blur-[1px]" style={{ maskImage: "linear-gradient(to left, black, transparent)" }}></div>
+      </div>
+    )
+  }
 
   return (
     <div 
       className="h-80 w-full overflow-hidden flex items-center justify-center relative bg-transparent"
       style={{ 
-        perspective: "1000px", // Stronger perspective for clearer curvature
+        perspective: "1000px", 
          maskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
         WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)"
       }}
@@ -64,8 +133,8 @@ const ImageSection = () => {
                 key={`${item.id}-${index}`} 
                 item={item} 
                 angle={angle}
-                radius={RADIUS}
-                cardWidth={CARD_WIDTH}
+                radius={radius}
+                cardWidth={cardWidth}
               />
             )
           })}
@@ -117,4 +186,3 @@ const Card = ({
 }
 
 export default ImageSection
-
