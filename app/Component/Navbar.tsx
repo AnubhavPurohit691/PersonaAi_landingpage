@@ -27,7 +27,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu List */}
       {isMenuOpen && (
-        <div className="absolute top-12 left-0 w-full bg-white shadow-md rounded-b-xl flex flex-col gap-4 p-6 md:hidden">
+        <div className="absolute top-full mt-2 left-0 w-full bg-white shadow-xl rounded-xl flex flex-col gap-4 p-6 md:hidden border border-gray-100">
             <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Services</Link>
             <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Blog</Link>
             <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Product</Link>

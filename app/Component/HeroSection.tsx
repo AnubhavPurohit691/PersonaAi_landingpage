@@ -5,11 +5,11 @@ import TextsAfterHero from './HeroSectionComponents/TextError'
 
 const HeroSection = () => {
   return (
-    <div className='flex flex-col gap-20 md:gap-0 '>
+    <div className='flex flex-col gap-12 md:gap-16 lg:gap-6'>
       <Hero_first_Section />
-      <ImageSection/>
-      <TextsAfterHero/>
-      <Bodycontent/>
+      <ImageSection />
+      <TextsAfterHero />
+      <Bodycontent />
     </div>
   )
 }

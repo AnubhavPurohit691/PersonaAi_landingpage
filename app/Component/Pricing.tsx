@@ -47,21 +47,21 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="py-10 px-4 md:px-10 max-w-[1400px] mx-auto" id="pricing">
+    <div className="py-16 px-0 md:px-8 max-w-[1400px] mx-auto" id="pricing">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto px-4">
           Choose the plan that fits your creative needs. Upgrade or cancel anytime.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch px-4 md:px-0">
         {plans.map((plan, index) => (
           <div
             key={index}
             className={`rounded-3xl px-8 flex flex-col transition-all duration-500 relative h-full ${
               plan.highlighted
-                ? 'bg-white border-2 border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] scale-105 z-10 py-12'
+                ? 'bg-white border-2 border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] md:scale-105 z-10 py-12'
                 : 'bg-white/40 backdrop-blur-md border border-white/60 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] z-0 py-8'
             }`}
           >

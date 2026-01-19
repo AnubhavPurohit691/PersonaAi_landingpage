@@ -3,7 +3,7 @@ import { imbue } from '../../layout'
 
 const Hero_first_Section = () => {
   return (
-    <div className=' flex flex-col gap-8 items-center pt-12 md:pt-32 lg:pt-16 '>
+    <div className=' flex flex-col gap-8 items-center pt-10 md:pt-16 lg:pt-24 '>
       <div className='items-center flex flex-col text-center'>
         <div className={`text-3xl md:text-6xl ${imbue.className} `}  >Streamline Your Team,</div>
         <div className='font-bold  text-4xl md:text-7xl '>Super Charge Your Workflow</div>

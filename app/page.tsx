@@ -8,7 +8,7 @@ import Footer from "./Component/Footer";
 export default function Home() {
   return (
     <>
-      <div className="py-4 px-6 md:px-20">
+      <div className="py-6 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 max-w-screen-2xl mx-auto">
         <Navbar />
         <HeroSection/>
         <BentoGrid/>
