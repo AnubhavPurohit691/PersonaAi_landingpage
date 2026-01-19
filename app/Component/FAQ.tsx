@@ -33,7 +33,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="py-10 px-0 max-w-4xl mx-auto">
+    <div className="py-10 px-4 max-w-4xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
         <p className="text-gray-500 text-base">
@@ -51,7 +51,7 @@ const FAQ = () => {
               onClick={() => toggleFAQ(index)}
               className="w-full flex justify-between items-center py-4 text-left font-bold text-lg hover:text-gray-700 transition-colors focus:outline-none"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 pl-4">
                  {faq.question}
               </div>
               <div className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
@@ -63,7 +63,7 @@ const FAQ = () => {
                 openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <p className="text-gray-600 leading-relaxed pl-12 pb-4 text-sm md:text-base">
+              <p className="text-gray-600 leading-relaxed pl-4 pb-4 text-sm md:text-base">
                 {faq.answer}
               </p>
             </div>
