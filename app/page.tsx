@@ -1,7 +1,6 @@
 import BentoGrid from "./Component/BentoGrid";
 import HeroSection from "./Component/HeroSection";
 import { Navbar } from "./Component/Navbar";
-import TextafterBento from "./Component/TextafterBento";
 import Pricing from "./Component/Pricing";
 import FAQ from "./Component/FAQ";
 import Footer from "./Component/Footer";

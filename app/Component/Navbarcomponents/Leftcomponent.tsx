@@ -1,18 +1,22 @@
+import Link from "next/link"
+
 export const Leftcomponent = () => {
+  const linkClasses = "cursor-pointer hidden md:block relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full";
+  
   return (
     <>
-      <div className="cursor-pointer hidden md:block">
+      <Link href="#" className={linkClasses}>
         Services
-      </div>
-      <div className="cursor-pointer hidden md:block">
+      </Link>
+      <Link href="#" className={linkClasses}>
         Blog
-      </div>
-      <div className="cursor-pointer hidden md:block">
+      </Link>
+      <Link href="#" className={linkClasses}>
         Product
-      </div>
-      <div className="cursor-pointer hidden md:block">
+      </Link>
+      <Link href="#" className={linkClasses}>
         Services
-      </div>
+      </Link>
     </>
   )
 }

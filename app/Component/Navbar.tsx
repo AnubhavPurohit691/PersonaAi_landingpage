@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link"
 import { Leftcomponent } from "./Navbarcomponents/Leftcomponent"
 import { Rightcomponent } from "./Navbarcomponents/Rightcomponent"
 import { FaBars, FaTimes } from "react-icons/fa"
@@ -27,12 +28,12 @@ export const Navbar = () => {
       {/* Mobile Menu List */}
       {isMenuOpen && (
         <div className="absolute top-12 left-0 w-full bg-white shadow-md rounded-b-xl flex flex-col gap-4 p-6 md:hidden">
-            <div className="cursor-pointer font-medium hover:text-gray-600">Services</div>
-            <div className="cursor-pointer font-medium hover:text-gray-600">Blog</div>
-            <div className="cursor-pointer font-medium hover:text-gray-600">Product</div>
-            <div className="cursor-pointer font-medium hover:text-gray-600">About</div>
-            <div className="cursor-pointer font-medium hover:text-gray-600">Pricing</div>
-            <div className="cursor-pointer font-medium hover:text-gray-600">Contact</div>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Services</Link>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Blog</Link>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Product</Link>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">About</Link>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Pricing</Link>
+            <Link href="#" className="cursor-pointer font-medium hover:text-gray-600 w-fit relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">Contact</Link>
             <button className="bg-black text-white px-4 py-2 rounded-full mt-2 w-fit">
               Get started
             </button>

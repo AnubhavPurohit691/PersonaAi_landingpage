@@ -81,7 +81,7 @@ const Pricing = () => {
             </div>
 
             <div className="flex-grow mb-8">
-              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">What's included</div>
+              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">What&apos;s included</div>
               <ul className="space-y-3">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">

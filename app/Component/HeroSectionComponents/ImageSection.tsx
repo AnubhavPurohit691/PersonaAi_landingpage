@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { motion, useMotionValue, animate, useTransform } from "motion/react"
+import { motion, useMotionValue, animate } from "motion/react"
 import { useEffect, useState } from "react"
 
 const imageMap = [
