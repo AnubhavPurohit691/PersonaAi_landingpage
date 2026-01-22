@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <div className="py-6 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 max-w-screen-2xl mx-auto">
         <Navbar />
-        <HeroSection/>
-        <BentoGrid/>
+        <HeroSection />
+        <BentoGrid />
         <Pricing />
         <FAQ />
       </div>

@@ -16,9 +16,9 @@ export const Rightcomponent = () => {
         <Link href="#" className={linkClasses}>
           Contact
         </Link>
-        <button className="bg-black pl-4 pr-1 text-sm cursor-pointer  py-1 hidden md:flex gap-1   text-white rounded-4xl">
-          <div className="pt-1">
-          Get started
+        <button className="bg-black pl-4 flex items-center  text-sm cursor-pointer  px-1 py-1 hidden md:flex gap-1 text-white rounded-4xl">
+          <div className="">
+            Get started
           </div>
           <div className="pl-1">
             <FaArrowCircleRight color="white" size={26} />

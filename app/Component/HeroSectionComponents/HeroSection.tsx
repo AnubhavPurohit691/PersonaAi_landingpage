@@ -15,11 +15,11 @@ const Hero_first_Section = () => {
           <div className='text-base md:text-lg text-gray-500'>and deliver -- faster and smarter.</div>
         </div>
         <div className=' flex items-center text-center justify-center'>
-          <button className='bg-black  cursor-pointer flex gap-2 text-white    rounded-4xl'>
-            <div className='pl-6 pt-2 text-sm md:text-base'>
+          <button className='bg-black  cursor-pointer flex items-center gap-2 text-white    rounded-4xl'>
+            <div className=' pl-4 text-sm md:text-base'>
               Get started for Free
             </div>
-            <FaArrowCircleRight  size={40} className='pr-1 py-1' />
+            <FaArrowCircleRight size={40} className=' py-1' />
           </button>
         </div>
       </div>
